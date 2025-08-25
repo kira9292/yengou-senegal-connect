@@ -2,41 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* YENGOU Design System - Couleurs du Sénégal */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 98%;
+    --foreground: 210 24% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 24% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 24% 16%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Couleurs du drapeau sénégalais */
+    --primary: 142 100% 26%; /* Vert #00853D */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 100% 35%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 52 100% 50%; /* Jaune #FDEF00 */
+    --secondary-foreground: 210 24% 16%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 2 84% 52%; /* Rouge #E31E24 */
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 2 84% 52%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --info: 217 91% 60%;
 
-    --radius: 0.5rem;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 142 100% 26%;
+
+    --radius: 0.75rem;
+
+    /* Gradients spécialisés */
+    --gradient-senegal: linear-gradient(135deg, hsl(142 100% 26%), hsl(52 100% 50%), hsl(2 84% 52%));
+    --gradient-primary: linear-gradient(135deg, hsl(142 100% 26%), hsl(142 100% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 100% 26% / 0.95), hsl(2 84% 52% / 0.95));
+    
+    /* Shadows */
+    --shadow-senegal: 0 10px 30px -10px hsl(142 100% 26% / 0.3);
+    --shadow-glow: 0 0 40px hsl(142 100% 35% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
