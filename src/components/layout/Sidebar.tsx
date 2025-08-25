@@ -44,6 +44,12 @@ const menuItems = [
     category: 'Administration'
   },
   {
+    id: 'payments',
+    label: 'Paiements',
+    icon: BarChart3,
+    category: 'Administration'
+  },
+  {
     id: 'analytics',
     label: 'Analytics',
     icon: BarChart3,
@@ -86,13 +92,13 @@ export const Sidebar = ({ activeTab, onTabChange, isOpen }: SidebarProps) => {
 
   return (
     <div className={cn(
-      "h-full bg-card border-r border-border transition-all duration-300 flex flex-col",
+      "h-full bg-white border-r border-border flex flex-col",
       isOpen ? "w-64" : "w-0 lg:w-64"
     )}>
       <div className="p-6 space-y-6 overflow-auto">
         {Object.entries(groupedItems).map(([category, items]) => (
-          <div key={category} className="space-y-2">
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+          <div key={category} className="space-y-3">
+            <h3 className="text-xs font-medium text-muted-foreground uppercase tracking-wider px-3">
               {category}
             </h3>
             <div className="space-y-1">
@@ -103,8 +109,8 @@ export const Sidebar = ({ activeTab, onTabChange, isOpen }: SidebarProps) => {
                     key={item.id}
                     variant={activeTab === item.id ? "default" : "ghost"}
                     className={cn(
-                      "w-full justify-start h-10 transition-all duration-200 hover:shadow-sm",
-                      activeTab === item.id && "bg-gradient-primary text-primary-foreground shadow-blue"
+                      "w-full justify-start h-10 px-3 rounded-lg text-sm font-medium transition-colors",
+                      activeTab === item.id ? "bg-primary text-white shadow-sm" : "text-foreground hover:bg-secondary"
                     )}
                     onClick={() => onTabChange(item.id)}
                   >

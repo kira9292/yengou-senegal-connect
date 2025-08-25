@@ -2,61 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* YENGOU Design System - Palette Bleu & Blanc Moderne */
+/* YENGOU Design System - Palette Minimaliste Bleu & Blanc */
 
 @layer base {
   :root {
-    --background: 0 0% 99%;
-    --foreground: 221 39% 11%;
+    --background: 0 0% 100%;
+    --foreground: 213 13% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 221 39% 11%;
+    --card-foreground: 213 13% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 221 39% 11%;
+    --popover-foreground: 213 13% 27%;
 
-    /* Palette Bleu Moderne */
-    --primary: 217 91% 60%; /* Bleu principal #3B82F6 */
+    /* Palette Bleu Minimaliste */
+    --primary: 214 100% 50%; /* Bleu pur moderne #0080FF */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 91% 70%;
-    --primary-dark: 217 91% 45%;
+    --primary-hover: 214 100% 45%;
+    --primary-light: 214 100% 97%;
 
-    --secondary: 214 32% 91%; /* Bleu très clair */
-    --secondary-foreground: 221 39% 11%;
+    --secondary: 214 20% 95%; /* Gris-bleu très clair */
+    --secondary-foreground: 213 13% 27%;
 
-    --accent: 221 83% 53%; /* Bleu profond #1D4ED8 */
+    --accent: 214 100% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 8% 46%;
+    --muted: 0 0% 98%;
+    --muted-foreground: 213 8% 50%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 65% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --success: 142 76% 36%;
-    --warning: 38 92% 50%;
-    --info: 204 94% 94%;
+    --success: 160 100% 40%;
+    --warning: 38 100% 50%;
+    --info: 214 100% 97%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 91% 60%;
+    --border: 214 20% 90%;
+    --input: 214 20% 95%;
+    --ring: 214 100% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Gradients Bleu Moderne */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60% / 0.95), hsl(221 83% 53% / 0.95));
-    --gradient-ocean: linear-gradient(135deg, hsl(217 91% 60%), hsl(204 100% 77%), hsl(0 0% 100%));
-    --gradient-depth: linear-gradient(180deg, hsl(221 83% 53%), hsl(217 91% 35%));
+    /* Styles Minimalistes */
+    --gradient-primary: linear-gradient(135deg, hsl(214 100% 50%), hsl(214 100% 55%));
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 100%), hsl(214 20% 98%));
+    --shadow-sm: 0 1px 2px 0 hsl(214 20% 85% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(214 20% 85% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(214 20% 85% / 0.1);
     
-    /* Shadows */
-    --shadow-blue: 0 10px 30px -10px hsl(217 91% 60% / 0.25);
-    --shadow-glow: 0 0 40px hsl(217 91% 70% / 0.3);
-    --shadow-elegant: 0 4px 20px -4px hsl(221 83% 53% / 0.15);
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Transitions Douces */
+    --transition-fast: all 0.15s ease-out;
+    --transition-smooth: all 0.2s ease-out;
 
     --sidebar-background: 0 0% 98%;
 

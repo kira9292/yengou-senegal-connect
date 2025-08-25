@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
 import { Header } from "@/components/layout/Header";
 import { Sidebar } from "@/components/layout/Sidebar";
+import { useAuth } from "@/hooks/useAuth";
+import { realtimeService } from "@/services/realtimeService";
 import { AdminDashboard } from "@/components/dashboard/AdminDashboard";
 import { SupportDashboard } from "@/components/support/SupportDashboard";
+import { DriverManagement } from "@/components/admin/DriverManagement";
+import { TripMonitoring } from "@/components/admin/TripMonitoring";
+import { RealtimeMap } from "@/components/admin/RealtimeMap";
 import { 
   AdminMetrics, 
   TripLocation, 
@@ -14,8 +19,20 @@ import {
 } from "@/types/yengou";
 
 export const YengouApp = () => {
+  const { user, logout, token } = useAuth();
   const [activeTab, setActiveTab] = useState('dashboard');
   const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  // Initialiser la connexion temps réel
+  useEffect(() => {
+    if (token) {
+      realtimeService.connect(token);
+    }
+
+    return () => {
+      realtimeService.disconnect();
+    };
+  }, [token]);
 
   // Données mockées pour la démo
   const [adminMetrics] = useState<AdminMetrics>({
@@ -199,15 +216,13 @@ export const YengouApp = () => {
       case 'trips':
         return (
           <div className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Gestion des Courses</h2>
-            <p className="text-muted-foreground">Module de gestion des courses en développement...</p>
+            <TripMonitoring />
           </div>
         );
       case 'drivers':
         return (
           <div className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Gestion des Chauffeurs</h2>
-            <p className="text-muted-foreground">Module de gestion des chauffeurs en développement...</p>
+            <DriverManagement />
           </div>
         );
       case 'vehicles':
@@ -258,7 +273,7 @@ export const YengouApp = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background flex">
+    <div className="min-h-screen bg-muted flex">
       {/* Sidebar */}
       <div className={`${sidebarOpen ? 'block' : 'hidden'} lg:block`}>
         <Sidebar
@@ -272,8 +287,9 @@ export const YengouApp = () => {
       <div className="flex-1 flex flex-col min-w-0">
         <Header
           onMenuClick={() => setSidebarOpen(!sidebarOpen)}
-          userName="Admin YENGOU"
+          userName={user ? `${user.firstName} ${user.lastName}` : "YENGOU User"}
           notifications={alerts.filter(a => !a.isRead).length}
+          onLogout={logout}
         />
         
         <main className="flex-1 overflow-auto">
