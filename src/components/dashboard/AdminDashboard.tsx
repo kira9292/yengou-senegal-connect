@@ -62,46 +62,46 @@ export const AdminDashboard = ({ metrics, trips, drivers, alerts }: AdminDashboa
 
       {/* Métriques principales */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="bg-gradient-primary text-primary-foreground shadow-senegal">
+        <Card className="bg-gradient-primary text-primary-foreground shadow-blue animate-slide-up">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Courses Actives</CardTitle>
             <Car className="h-4 w-4" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.activeTrips}</div>
-            <p className="text-xs opacity-80">
+            <p className="text-xs opacity-90">
               +12% par rapport à hier
             </p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-secondary to-secondary/80 text-secondary-foreground">
+        <Card className="bg-gradient-to-br from-accent to-primary-dark text-accent-foreground shadow-elegant animate-slide-up">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Chauffeurs en ligne</CardTitle>
             <Users className="h-4 w-4" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.onlineDrivers}</div>
-            <p className="text-xs opacity-70">
+            <p className="text-xs opacity-90">
               Sur 1,247 chauffeurs
             </p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-success to-success/80 text-white">
+        <Card className="bg-gradient-depth text-white shadow-glow animate-slide-up">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Revenus du jour</CardTitle>
             <DollarSign className="h-4 w-4" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.dailyRevenue.toLocaleString()} FCFA</div>
-            <p className="text-xs opacity-80">
+            <p className="text-xs opacity-90">
               +8% objectif atteint
             </p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-accent to-accent/80 text-accent-foreground">
+        <Card className="bg-gradient-ocean text-primary shadow-elegant animate-slide-up">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Satisfaction Client</CardTitle>
             <TrendingUp className="h-4 w-4" />

@@ -18,7 +18,7 @@ interface HeaderProps {
 
 export const Header = ({ onMenuClick, userName, notifications }: HeaderProps) => {
   return (
-    <header className="h-16 bg-gradient-primary border-b border-border flex items-center justify-between px-4 lg:px-6 shadow-senegal">
+    <header className="h-16 bg-gradient-primary border-b border-border flex items-center justify-between px-4 lg:px-6 shadow-blue animate-fade-in">
       <div className="flex items-center space-x-4">
         <Button
           variant="ghost"
@@ -30,12 +30,12 @@ export const Header = ({ onMenuClick, userName, notifications }: HeaderProps) =>
         </Button>
         
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-senegal rounded-lg flex items-center justify-center text-xl font-bold text-white">
+          <div className="w-10 h-10 bg-gradient-ocean rounded-lg flex items-center justify-center text-xl font-bold text-primary shadow-elegant">
             Y
           </div>
           <div>
             <h1 className="text-xl font-bold text-primary-foreground">YENGOU</h1>
-            <p className="text-sm text-primary-foreground/80">Admin Dashboard</p>
+            <p className="text-sm text-primary-foreground/90">Admin Dashboard</p>
           </div>
         </div>
       </div>

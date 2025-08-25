@@ -103,8 +103,8 @@ export const Sidebar = ({ activeTab, onTabChange, isOpen }: SidebarProps) => {
                     key={item.id}
                     variant={activeTab === item.id ? "default" : "ghost"}
                     className={cn(
-                      "w-full justify-start h-10",
-                      activeTab === item.id && "bg-gradient-primary text-primary-foreground shadow-senegal"
+                      "w-full justify-start h-10 transition-all duration-200 hover:shadow-sm",
+                      activeTab === item.id && "bg-gradient-primary text-primary-foreground shadow-blue"
                     )}
                     onClick={() => onTabChange(item.id)}
                   >

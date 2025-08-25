@@ -85,33 +85,33 @@ export const SupportDashboard = ({
 
       {/* Métriques principales */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-        <Card className="bg-gradient-primary text-primary-foreground shadow-senegal">
+        <Card className="bg-gradient-primary text-primary-foreground shadow-blue animate-slide-up">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Tickets Ouverts</CardTitle>
             <Ticket className="h-4 w-4" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.openTickets}</div>
-            <p className="text-xs opacity-80">
+            <p className="text-xs opacity-90">
               Sur {metrics.totalTickets} total
             </p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-warning to-warning/80 text-white">
+        <Card className="bg-gradient-depth text-white shadow-elegant animate-slide-up">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Temps de Réponse</CardTitle>
             <Clock className="h-4 w-4" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.averageResponseTime}min</div>
-            <p className="text-xs opacity-80">
+            <p className="text-xs opacity-90">
               Moyenne aujourd'hui
             </p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-success to-success/80 text-white">
+        <Card className="bg-gradient-ocean text-primary shadow-glow animate-slide-up">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Satisfaction</CardTitle>
             <TrendingUp className="h-4 w-4" />
@@ -124,27 +124,27 @@ export const SupportDashboard = ({
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-accent to-accent/80 text-accent-foreground">
+        <Card className="bg-gradient-to-br from-accent to-primary-dark text-accent-foreground shadow-blue animate-slide-up">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Résolus Aujourd'hui</CardTitle>
             <CheckCircle2 className="h-4 w-4" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.resolvedToday}</div>
-            <p className="text-xs opacity-80">
+            <p className="text-xs opacity-90">
               +15% vs hier
             </p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-info to-info/80 text-white">
+        <Card className="bg-gradient-to-br from-primary-glow to-primary text-white shadow-elegant animate-slide-up">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Chats Actifs</CardTitle>
             <MessageCircle className="h-4 w-4" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{activeChatSessions.length}</div>
-            <p className="text-xs opacity-80">
+            <p className="text-xs opacity-90">
               Sessions en cours
             </p>
           </CardContent>
